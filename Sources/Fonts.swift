@@ -46,11 +46,15 @@ extension Font {
     }
 }
 
+protocol IconProtocol {
+    static var medium: FontConvertible { get }
+}
+
 enum FontFamily {
-    enum Ionicons {
+    enum Ionicons: IconProtocol {
         static let medium = FontConvertible(name: "Ionicons", family: "Ionicons", path: "ionicons")
     }
-    enum FontAwesome {
+    enum FontAwesome: IconProtocol {
         static let medium = FontConvertible(name: "FontAwesome", family: "FontAwesome", path: "fontawesome-webfont")
     }
 }

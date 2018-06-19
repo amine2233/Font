@@ -2,6 +2,7 @@ import UIKit
 
 /// A Ionicons extension to UIImageView.
 public extension UIImageView {
+    
     /// Initializes a new item using the specified icon and other properties.
     ///
     /// - parameter name: The preferred icon name.
@@ -16,6 +17,19 @@ public extension UIImageView {
 }
 
 public extension UIButton {
+    
+    /**
+     Initializes a new UIButton using the specified icon and other properties.
+     
+     - parameter icon: The icon to be used as image.
+     - parameter color: The color of the image.
+     - parameter size: The size of the image, in points.
+    */
+    convenience init(withIcon icon: Ionicons, color: UIColor? = nil, size: CGSize? = nil) {
+        self.init(frame: .zero)
+        self.setIconImage(withIcon: icon, forState: [], color: color, size: size)
+    }
+    
     /**
      Sets the icon to use for the specified state.
      - parameter icon: The icon to be used as image.
@@ -23,13 +37,14 @@ public extension UIButton {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setIconImage(withIcon icon: Ionicons, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
+    func setIconImage(withIcon icon: Ionicons, forState state: UIControlState = [], color: UIColor? = nil, size: CGSize? = nil) {
         let image = UIImage.ionicon(with: icon, textColor: color ?? self.tintColor, size: size ?? self.frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }
 }
 
 public extension UITabBarItem {
+    
     /**
      Initializes a new item using the specified icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
@@ -57,6 +72,7 @@ public extension UITabBarItem {
 }
 
 public extension UIBarButtonItem {
+    
     /**
      Initializes a new item using the specified icon and other properties.
      - parameter icon: The icon to be used as image.

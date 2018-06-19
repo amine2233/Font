@@ -216,10 +216,9 @@
 				6791322020860D3500E815DD /* Fonts.swift */,
 				6791322920860D6E00E815DD /* IonIcon.swift */,
 				6791322E20860D9300E815DD /* StringExtension.swift */,
-				679131E820860CBF00E815DD /* iOS */,
-				679131E720860CBE00E815DD /* macOS */,
+				679131E820860CBF00E815DD /* UIKit */,
+				679131E720860CBE00E815DD /* AppKit */,
 				679131E920860CBF00E815DD /* Resources */,
-				679131F720860CBF00E815DD /* watchOS */,
 				679131D720860A7800E815DD /* Font.h */,
 				679131D620860A7800E815DD /* Info.plist */,
 			);
@@ -235,21 +234,21 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		679131E720860CBE00E815DD /* macOS */ = {
+		679131E720860CBE00E815DD /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
 				6791322520860D5000E815DD /* IonIconCocoaExtensions.swift */,
 			);
-			path = macOS;
+			path = AppKit;
 			sourceTree = "<group>";
 		};
-		679131E820860CBF00E815DD /* iOS */ = {
+		679131E820860CBF00E815DD /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				6791323A20860DFE00E815DD /* IoniconsExtensions.swift */,
 				679132442086125100E815DD /* IoniconsUIExtensions.swift */,
 			);
-			path = iOS;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		679131E920860CBF00E815DD /* Resources */ = {
@@ -291,13 +290,6 @@
 				679131F620860CBF00E815DD /* ionicons.woff */,
 			);
 			path = Ionicon;
-			sourceTree = "<group>";
-		};
-		679131F720860CBF00E815DD /* watchOS */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = watchOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +705,7 @@
 		67913170208608AF00E815DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 			};
 			name = Debug;
@@ -720,6 +713,7 @@
 		67913171208608AF00E815DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 			};
 			name = Release;

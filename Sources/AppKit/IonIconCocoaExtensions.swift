@@ -1,12 +1,17 @@
 import Cocoa
 
 public extension NSImage {
+    
     public static func ionicon(with name: Ionicons, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage {
         let fontSize = min(size.width, size.height)
+        return imageFont(with: Font(font: FontFamily.Ionicons.medium, size: fontSize), name: name.rawValue, textColor: textColor, size: size, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
+    }
+    
+    static func imageFont(with font: NSFont, name: String, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = NSTextAlignment.center
-        let fontsAttributes = [NSAttributedStringKey.font: FontFamily.Ionicons.medium.font(size: fontSize), NSAttributedStringKey.foregroundColor: textColor, NSAttributedStringKey.backgroundColor: backgroundColor, NSAttributedStringKey.paragraphStyle: paragraph]
-        let attributedString = NSAttributedString(string: String.ionicon(with: name), attributes: fontsAttributes)
+        let fontsAttributes = [NSAttributedStringKey.font: font , NSAttributedStringKey.foregroundColor: textColor, NSAttributedStringKey.backgroundColor: backgroundColor, NSAttributedStringKey.paragraphStyle: paragraph]
+        let attributedString = NSAttributedString(string: String.icon(with: name), attributes: fontsAttributes)
         
         var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         rect.origin.y -= edgeInsets.top
