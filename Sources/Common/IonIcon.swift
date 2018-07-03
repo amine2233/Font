@@ -8,7 +8,6 @@
 import Foundation
 
 public enum Ionicons: String {
-    
     case alert = "\u{f101}"
     case alertCircled = "\u{f100}"
     case androidAdd = "\u{f2c7}"

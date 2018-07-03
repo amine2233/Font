@@ -11,11 +11,7 @@ public extension String {
         return String(name.rawValue[..<name.rawValue.index(name.rawValue.startIndex, offsetBy: 1)])
     }
     
-    /// Get a Ionicons icon string with the given rawValue of icon name.
-    ///
-    /// - parameter rawValue: The string rawValue icon name.
-    /// - returns: A string that will appear as icon with Ionicons.
-    public static func icon(with rawValue: String) -> String {
-        return String(rawValue[..<rawValue.index(rawValue.startIndex, offsetBy: 1)])
+    public static func fontAwesome(with name: FontAwesome) -> String {
+        return String(name.rawValue[..<name.rawValue.index(name.rawValue.startIndex, offsetBy: 1)])
     }
 }
