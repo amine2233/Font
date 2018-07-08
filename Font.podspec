@@ -2,15 +2,25 @@ Pod::Spec.new do |s|
 		s.name 				= "Font"
 		s.version 			= "0.1.3"
 		s.summary         	= "Sort description of 'Font' framework"
-	    s.homepage        	= "http://www.welovemac.fr"
-	    s.license           = "MIT"
-	    s.author            = "Amine Bensalah"
-	    s.platform          = :ios, "11.3"
-	    s.source            = { :git => "https://github.com/amine2233/Font.git", :tag => "0.1.3" }
+	    s.homepage        	= "https://github.com/amine2233/Font"
+	    s.license           = { type: 'MIT', file: 'LICENSE' }
+	    s.author            = { 'Amine Bensalah' => 'amine.bensalah@outlook.com' }
+	    s.ios.deployment_target = '10.0'
+	    s.osx.deployment_target = '10.12'
+	    s.tvos.deployment_target = '10.0'
+	    s.watchos.deployment_target = '3.0'
+	    s.requires_arc = true
+	    s.source            = { :git => "https://github.com/amine2233/Font.git", :tag => s.version.to_s }
 	    s.resource			= "Sources/Resources/**/*.ttf","Sources/Resources/**/*.otf"
-	    s.source_files      = "Sources/Common/*.swift"
-  		s.ios.source_files  = "Sources/UIKit/*.swift"
-  		s.osx.source_files  = "Sources/AppKit/*.swift"
-	    s.swift_version 	= "4.1"
-	    s.module_name   	= "Font"
+	    s.source_files      = "Sources/**/*.swift"
+	    s.pod_target_xcconfig = {
+    		'SWIFT_VERSION' => '4.1'
+  		}
+  		s.module_name = s.name
+  		s.swift_version = '4.1'
+  		
+		s.ios.exclude_files = "Sources/AppKit", "Sources/WatchKit"
+  		s.tvos.exclude_files = "Sources/AppKit", "Sources/WatchKit"
+  		s.osx.exclude_files = "Sources/UIKit", "Sources/WatchKit"
+  		s.watchos.exclude_files = "Sources/AppKit", "Sources/UIKit"
 	end

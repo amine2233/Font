@@ -1,6 +1,8 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
+#if !os(watchOS)
 /// A Ionicons extension to UIImage.
 public extension UIImage {
     /// Get a Ionicons image with the given icon name, text color, size and an optional background color.
@@ -22,7 +24,7 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
-    
+
     /// Get a FontAwesome image with the given icon name, text color, size and an optional background color.
     ///
     /// - parameter name: The preferred icon name.
@@ -43,3 +45,6 @@ public extension UIImage {
         return image!
     }
 }
+#endif
+
+#endif

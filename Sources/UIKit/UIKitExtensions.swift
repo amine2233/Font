@@ -1,5 +1,7 @@
+#if canImport(UIKit)
 import UIKit
 
+#if !os(watchOS)
 /// A Ionicons extension to UIImageView.
 public extension UIImageView {
     /// Initializes a new item using the specified icon and other properties.
@@ -9,9 +11,9 @@ public extension UIImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImageView that will appear as icon with Ionicons
-    convenience init(withName name: Ionicons, color: UIColor? = nil, size: CGSize? = nil, backgroundColor: UIColor = .clear) {
+    convenience init(withName name: Ionicons, color: UIColor? = nil, size: CGSize? = nil, backgroundColor _: UIColor = .clear) {
         self.init()
-        self.image = UIImage.ionicon(with: name, textColor: color ?? self.tintColor, size: size ?? self.frame.size, backgroundColor: .clear)
+        image = UIImage.ionicon(with: name, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
     }
 }
 
@@ -24,7 +26,7 @@ public extension UIButton {
      - parameter size: The size of the image, in points.
      */
     func setIconImage(withIcon icon: Ionicons, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
-        let image = UIImage.ionicon(with: icon, textColor: color ?? self.tintColor, size: size ?? self.frame.size, backgroundColor: .clear)
+        let image = UIImage.ionicon(with: icon, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }
 }
@@ -42,7 +44,7 @@ public extension UITabBarItem {
         let image = UIImage.ionicon(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(title: title, image: image, tag: icon.hashValue)
     }
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
@@ -69,7 +71,7 @@ public extension UIBarButtonItem {
         let image = UIImage.ionicon(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(image: image, style: .plain, target: target, action: action)
     }
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
      - parameter icon: The icon to be used as image.
@@ -77,6 +79,9 @@ public extension UIBarButtonItem {
      - parameter action: The action to send to target when this item is selected.
      */
     convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector) {
-        self.init(withIcon: icon, target: target, action:action, size: CGSize.init(width: 24.0, height: 24.0), color: .blue)
+        self.init(withIcon: icon, target: target, action: action, size: CGSize(width: 24.0, height: 24.0), color: .blue)
     }
 }
+#endif
+
+#endif

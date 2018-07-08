@@ -779,7 +779,7 @@ public enum FontAwesome: String {
     case youTube = "\u{f167}"
     case youTubePlay = "\u{f16a}"
     case youTubeSquare = "\u{f166}"
-    
+
     /// Get a FontAwesome string from the given CSS icon code. Icon code can be found here: http://fontawesome.io/icons/
     ///
     /// - parameter code: The preferred icon name.
@@ -794,7 +794,7 @@ public enum FontAwesome: String {
 
 /// An array of FontAwesome icon codes.
 // swiftlint:disable identifier_name
-public let FontAwesomeIcons: [String : String] = [
+public let FontAwesomeIcons: [String: String] = [
     "fa-500px": "\u{f26e}",
     "fa-adjust": "\u{f042}",
     "fa-adn": "\u{f170}",
@@ -1565,6 +1565,5 @@ public let FontAwesomeIcons: [String : String] = [
     "fa-yoast": "\u{f2b1}",
     "fa-youtube": "\u{f167}",
     "fa-youtube-play": "\u{f16a}",
-    "fa-youtube-square": "\u{f166}"
+    "fa-youtube-square": "\u{f166}",
 ]
-
