@@ -1,5 +1,4 @@
 #if canImport(UIKit)
-import Foundation
 import UIKit
 
 #if !os(watchOS)

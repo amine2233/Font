@@ -18,9 +18,4 @@ Pod::Spec.new do |s|
   		}
   		s.module_name = s.name
   		s.swift_version = '4.1'
-  		
-		s.ios.exclude_files = "Sources/AppKit", "Sources/WatchKit"
-  		s.tvos.exclude_files = "Sources/AppKit", "Sources/WatchKit"
-  		s.osx.exclude_files = "Sources/UIKit", "Sources/WatchKit"
-  		s.watchos.exclude_files = "Sources/AppKit", "Sources/UIKit"
 	end
