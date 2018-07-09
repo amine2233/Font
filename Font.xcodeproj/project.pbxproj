@@ -16,6 +16,10 @@
 		6751218E20EB470800CC3DD7 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751218220EB46C200CC3DD7 /* UIKitExtensions.swift */; };
 		6751218F20EB471200CC3DD7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751218120EB46C200CC3DD7 /* UIImageExtensions.swift */; };
 		6751219120EB479700CC3DD7 /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751219020EB479700CC3DD7 /* NSImageExtension.swift */; };
+		6757B8C420F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */; };
+		6757B8C520F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */; };
+		6757B8C620F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */; };
+		6757B8C720F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */; };
 		67913181208608E000E815DD /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67913177208608E000E815DD /* Font.framework */; };
 		6791319D208608F500E815DD /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67913194208608F500E815DD /* Font.framework */; };
 		679131C62086091E00E815DD /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679131BD2086091E00E815DD /* Font.framework */; };
@@ -24,46 +28,10 @@
 		679131DD20860A8100E815DD /* Font.h in Headers */ = {isa = PBXBuildFile; fileRef = 679131D720860A7800E815DD /* Font.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		679131DE20860A8200E815DD /* Font.h in Headers */ = {isa = PBXBuildFile; fileRef = 679131D720860A7800E815DD /* Font.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		679131E120860AA800E815DD /* Font_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679131DF20860AA800E815DD /* Font_Tests.swift */; };
-		679131F820860CBF00E815DD /* fontawesome-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131EC20860CBF00E815DD /* fontawesome-webfont.eot */; };
-		679131F920860CBF00E815DD /* fontawesome-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131EC20860CBF00E815DD /* fontawesome-webfont.eot */; };
-		679131FA20860CBF00E815DD /* fontawesome-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131EC20860CBF00E815DD /* fontawesome-webfont.eot */; };
-		679131FB20860CBF00E815DD /* fontawesome-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131EC20860CBF00E815DD /* fontawesome-webfont.eot */; };
-		679131FC20860CBF00E815DD /* fontawesome-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131ED20860CBF00E815DD /* fontawesome-webfont.svg */; };
-		679131FD20860CBF00E815DD /* fontawesome-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131ED20860CBF00E815DD /* fontawesome-webfont.svg */; };
-		679131FE20860CBF00E815DD /* fontawesome-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131ED20860CBF00E815DD /* fontawesome-webfont.svg */; };
-		679131FF20860CBF00E815DD /* fontawesome-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131ED20860CBF00E815DD /* fontawesome-webfont.svg */; };
-		6791320020860CBF00E815DD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */; };
-		6791320120860CBF00E815DD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */; };
-		6791320220860CBF00E815DD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */; };
-		6791320320860CBF00E815DD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */; };
-		6791320420860CBF00E815DD /* fontawesome-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131EF20860CBF00E815DD /* fontawesome-webfont.woff */; };
-		6791320520860CBF00E815DD /* fontawesome-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131EF20860CBF00E815DD /* fontawesome-webfont.woff */; };
-		6791320620860CBF00E815DD /* fontawesome-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131EF20860CBF00E815DD /* fontawesome-webfont.woff */; };
-		6791320720860CBF00E815DD /* fontawesome-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131EF20860CBF00E815DD /* fontawesome-webfont.woff */; };
-		6791320820860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */; };
-		6791320920860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */; };
-		6791320A20860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */; };
-		6791320B20860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */; };
-		6791320C20860CBF00E815DD /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F120860CBF00E815DD /* FontAwesome.otf */; };
-		6791320D20860CBF00E815DD /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F120860CBF00E815DD /* FontAwesome.otf */; };
-		6791320E20860CBF00E815DD /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F120860CBF00E815DD /* FontAwesome.otf */; };
-		6791320F20860CBF00E815DD /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F120860CBF00E815DD /* FontAwesome.otf */; };
-		6791321020860CBF00E815DD /* ionicons.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131F320860CBF00E815DD /* ionicons.eot */; };
-		6791321120860CBF00E815DD /* ionicons.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131F320860CBF00E815DD /* ionicons.eot */; };
-		6791321220860CBF00E815DD /* ionicons.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131F320860CBF00E815DD /* ionicons.eot */; };
-		6791321320860CBF00E815DD /* ionicons.eot in Resources */ = {isa = PBXBuildFile; fileRef = 679131F320860CBF00E815DD /* ionicons.eot */; };
-		6791321420860CBF00E815DD /* ionicons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131F420860CBF00E815DD /* ionicons.svg */; };
-		6791321520860CBF00E815DD /* ionicons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131F420860CBF00E815DD /* ionicons.svg */; };
-		6791321620860CBF00E815DD /* ionicons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131F420860CBF00E815DD /* ionicons.svg */; };
-		6791321720860CBF00E815DD /* ionicons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 679131F420860CBF00E815DD /* ionicons.svg */; };
 		6791321820860CBF00E815DD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F520860CBF00E815DD /* ionicons.ttf */; };
 		6791321920860CBF00E815DD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F520860CBF00E815DD /* ionicons.ttf */; };
 		6791321A20860CBF00E815DD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F520860CBF00E815DD /* ionicons.ttf */; };
 		6791321B20860CBF00E815DD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679131F520860CBF00E815DD /* ionicons.ttf */; };
-		6791321C20860CBF00E815DD /* ionicons.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131F620860CBF00E815DD /* ionicons.woff */; };
-		6791321D20860CBF00E815DD /* ionicons.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131F620860CBF00E815DD /* ionicons.woff */; };
-		6791321E20860CBF00E815DD /* ionicons.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131F620860CBF00E815DD /* ionicons.woff */; };
-		6791321F20860CBF00E815DD /* ionicons.woff in Resources */ = {isa = PBXBuildFile; fileRef = 679131F620860CBF00E815DD /* ionicons.woff */; };
 		6791322720860D5000E815DD /* AppKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791322520860D5000E815DD /* AppKitExtensions.swift */; };
 		67913242208610FA00E815DD /* Font_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679131DF20860AA800E815DD /* Font_Tests.swift */; };
 		679132432086112A00E815DD /* Font_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679131DF20860AA800E815DD /* Font_Tests.swift */; };
@@ -110,6 +78,8 @@
 		6751218220EB46C200CC3DD7 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		6751218920EB46DB00CC3DD7 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		6751219020EB479700CC3DD7 /* NSImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
+		6757B8C220F3EBCA007AF6D1 /* Font.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Font.podspec; sourceTree = SOURCE_ROOT; };
+		6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		67913177208608E000E815DD /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67913180208608E000E815DD /* Font macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Font macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67913194208608F500E815DD /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,16 +91,7 @@
 		679131D720860A7800E815DD /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
 		679131DF20860AA800E815DD /* Font_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font_Tests.swift; sourceTree = "<group>"; };
 		679131E020860AA800E815DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		679131EC20860CBF00E815DD /* fontawesome-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.eot"; sourceTree = "<group>"; };
-		679131ED20860CBF00E815DD /* fontawesome-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "fontawesome-webfont.svg"; sourceTree = "<group>"; };
-		679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		679131EF20860CBF00E815DD /* fontawesome-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.woff"; sourceTree = "<group>"; };
-		679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.woff2"; sourceTree = "<group>"; };
-		679131F120860CBF00E815DD /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
-		679131F320860CBF00E815DD /* ionicons.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.eot; sourceTree = "<group>"; };
-		679131F420860CBF00E815DD /* ionicons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ionicons.svg; sourceTree = "<group>"; };
 		679131F520860CBF00E815DD /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
-		679131F620860CBF00E815DD /* ionicons.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.woff; sourceTree = "<group>"; };
 		6791322520860D5000E815DD /* AppKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitExtensions.swift; sourceTree = "<group>"; };
 		67DA9A6220EAD75A00CB69D7 /* IonIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IonIcon.swift; sourceTree = "<group>"; };
 		67DA9A6320EAD75A00CB69D7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -259,6 +220,7 @@
 		679131E920860CBF00E815DD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6757B8C220F3EBCA007AF6D1 /* Font.podspec */,
 				679131EA20860CBF00E815DD /* fonts */,
 			);
 			path = Resources;
@@ -276,12 +238,7 @@
 		679131EB20860CBF00E815DD /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
-				679131EC20860CBF00E815DD /* fontawesome-webfont.eot */,
-				679131ED20860CBF00E815DD /* fontawesome-webfont.svg */,
-				679131EE20860CBF00E815DD /* fontawesome-webfont.ttf */,
-				679131EF20860CBF00E815DD /* fontawesome-webfont.woff */,
-				679131F020860CBF00E815DD /* fontawesome-webfont.woff2 */,
-				679131F120860CBF00E815DD /* FontAwesome.otf */,
+				6757B8C320F40446007AF6D1 /* fontawesome-webfont.ttf */,
 			);
 			path = FontAwesome;
 			sourceTree = "<group>";
@@ -289,10 +246,7 @@
 		679131F220860CBF00E815DD /* Ionicon */ = {
 			isa = PBXGroup;
 			children = (
-				679131F320860CBF00E815DD /* ionicons.eot */,
-				679131F420860CBF00E815DD /* ionicons.svg */,
 				679131F520860CBF00E815DD /* ionicons.ttf */,
-				679131F620860CBF00E815DD /* ionicons.woff */,
 			);
 			path = Ionicon;
 			sourceTree = "<group>";
@@ -539,16 +493,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6791320820860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */,
-				6791320020860CBF00E815DD /* fontawesome-webfont.ttf in Resources */,
-				6791321020860CBF00E815DD /* ionicons.eot in Resources */,
-				6791320C20860CBF00E815DD /* FontAwesome.otf in Resources */,
-				6791321420860CBF00E815DD /* ionicons.svg in Resources */,
-				679131F820860CBF00E815DD /* fontawesome-webfont.eot in Resources */,
+				6757B8C420F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */,
 				6791321820860CBF00E815DD /* ionicons.ttf in Resources */,
-				6791320420860CBF00E815DD /* fontawesome-webfont.woff in Resources */,
-				679131FC20860CBF00E815DD /* fontawesome-webfont.svg in Resources */,
-				6791321C20860CBF00E815DD /* ionicons.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,16 +509,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6791320920860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */,
-				6791320120860CBF00E815DD /* fontawesome-webfont.ttf in Resources */,
-				6791321120860CBF00E815DD /* ionicons.eot in Resources */,
-				6791320D20860CBF00E815DD /* FontAwesome.otf in Resources */,
-				6791321520860CBF00E815DD /* ionicons.svg in Resources */,
-				679131F920860CBF00E815DD /* fontawesome-webfont.eot in Resources */,
+				6757B8C520F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */,
 				6791321920860CBF00E815DD /* ionicons.ttf in Resources */,
-				6791320520860CBF00E815DD /* fontawesome-webfont.woff in Resources */,
-				679131FD20860CBF00E815DD /* fontawesome-webfont.svg in Resources */,
-				6791321D20860CBF00E815DD /* ionicons.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,16 +525,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6791320A20860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */,
-				6791320220860CBF00E815DD /* fontawesome-webfont.ttf in Resources */,
-				6791321220860CBF00E815DD /* ionicons.eot in Resources */,
-				6791320E20860CBF00E815DD /* FontAwesome.otf in Resources */,
-				6791321620860CBF00E815DD /* ionicons.svg in Resources */,
-				679131FA20860CBF00E815DD /* fontawesome-webfont.eot in Resources */,
+				6757B8C620F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */,
 				6791321A20860CBF00E815DD /* ionicons.ttf in Resources */,
-				6791320620860CBF00E815DD /* fontawesome-webfont.woff in Resources */,
-				679131FE20860CBF00E815DD /* fontawesome-webfont.svg in Resources */,
-				6791321E20860CBF00E815DD /* ionicons.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,16 +534,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6791320B20860CBF00E815DD /* fontawesome-webfont.woff2 in Resources */,
-				6791320320860CBF00E815DD /* fontawesome-webfont.ttf in Resources */,
-				6791321320860CBF00E815DD /* ionicons.eot in Resources */,
-				6791320F20860CBF00E815DD /* FontAwesome.otf in Resources */,
-				6791321720860CBF00E815DD /* ionicons.svg in Resources */,
-				679131FB20860CBF00E815DD /* fontawesome-webfont.eot in Resources */,
+				6757B8C720F40446007AF6D1 /* fontawesome-webfont.ttf in Resources */,
 				6791321B20860CBF00E815DD /* ionicons.ttf in Resources */,
-				6791320720860CBF00E815DD /* fontawesome-webfont.woff in Resources */,
-				679131FF20860CBF00E815DD /* fontawesome-webfont.svg in Resources */,
-				6791321F20860CBF00E815DD /* ionicons.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

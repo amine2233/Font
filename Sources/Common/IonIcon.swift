@@ -742,3 +742,7 @@ public enum Ionicons: String {
     case wrench = "\u{f2ba}"
     case xbox = "\u{f30c}"
 }
+
+extension Ionicons: FontFamily {
+    public static let regularFont = FontConvertible(name: "Ionicons", family: "Ionicons", path: "ionicons")
+}

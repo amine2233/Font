@@ -22,8 +22,8 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>fontawesome-webfont.ttf</string>
 		<string>ionicons.ttf</string>
+		<string>fontawesome-webfont.ttf</string>
 	</array>
 </dict>
 </plist>
