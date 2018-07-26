@@ -9,7 +9,7 @@ extension NSImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImageView that will appear as icon with Ionicons
-    convenience init(withIcon icon: Ionicons, size: CGSize, color: NSColor = NSColor.darkGray) {
+    public convenience init(withIcon icon: Ionicons, size: CGSize, color: NSColor = NSColor.darkGray) {
         self.init(image: NSImage.ionicon(with: icon, textColor: color, size: size))
     }
 
@@ -20,7 +20,7 @@ extension NSImageView {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
+    public func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.ionicon(with: icon, textColor: color, size: size ?? frame.size)
     }
     
@@ -31,7 +31,7 @@ extension NSImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImageView that will appear as icon with Ionicons
-    convenience init(withIcon icon: FontAwesome, size: CGSize, color: NSColor = NSColor.darkGray) {
+    public convenience init(withIcon icon: FontAwesome, size: CGSize, color: NSColor = NSColor.darkGray) {
         self.init(image: NSImage.fontAwesome(with: icon, textColor: color, size: size))
     }
     
@@ -42,7 +42,7 @@ extension NSImageView {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
+    public func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.fontAwesome(with: icon, textColor: color, size: size ?? frame.size)
     }
 }
@@ -55,7 +55,7 @@ extension NSButton {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A NSButton that will appear as icon with Ionicons
-    convenience init(withIcon icon: Ionicons, size: CGSize, color: NSColor = NSColor.darkGray, target: Any? = nil, action: Selector? = nil) {
+    public convenience init(withIcon icon: Ionicons, size: CGSize, color: NSColor = NSColor.darkGray, target: Any? = nil, action: Selector? = nil) {
         self.init(image: NSImage.ionicon(with: icon, textColor: color, size: size), target: target, action: action)
     }
 
@@ -66,7 +66,7 @@ extension NSButton {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
+    public func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.ionicon(with: icon, textColor: color, size: size ?? frame.size)
     }
     
@@ -77,7 +77,7 @@ extension NSButton {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A NSButton that will appear as icon with Ionicons
-    convenience init(withIcon icon: FontAwesome, size: CGSize, color: NSColor = NSColor.darkGray, target: Any? = nil, action: Selector? = nil) {
+    public convenience init(withIcon icon: FontAwesome, size: CGSize, color: NSColor = NSColor.darkGray, target: Any? = nil, action: Selector? = nil) {
         self.init(image: NSImage.fontAwesome(with: icon, textColor: color, size: size), target: target, action: action)
     }
     
@@ -88,7 +88,7 @@ extension NSButton {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
+    public func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.fontAwesome(with: icon, textColor: color, size: size ?? frame.size)
     }
 }

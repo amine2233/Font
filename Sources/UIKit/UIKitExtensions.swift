@@ -11,7 +11,7 @@ public extension UIImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImageView that will appear as icon with Ionicons
-    convenience init(withName name: Ionicons, color: UIColor? = nil, size: CGSize? = nil, backgroundColor _: UIColor = .clear) {
+    public convenience init(withName name: Ionicons, color: UIColor? = nil, size: CGSize? = nil, backgroundColor _: UIColor = .clear) {
         self.init()
         image = UIImage.ionicon(with: name, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
     }
@@ -23,7 +23,7 @@ public extension UIImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImageView that will appear as icon with Ionicons
-    convenience init(withName name: FontAwesome, color: UIColor? = nil, size: CGSize? = nil, backgroundColor _: UIColor = .clear) {
+    public convenience init(withName name: FontAwesome, color: UIColor? = nil, size: CGSize? = nil, backgroundColor _: UIColor = .clear) {
         self.init()
         image = UIImage.fontAwesome(with: name, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
     }
@@ -37,7 +37,7 @@ public extension UIButton {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setIconImage(withIcon icon: Ionicons, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
+    public func setIconImage(withIcon icon: Ionicons, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
         let image = UIImage.ionicon(with: icon, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }
@@ -49,7 +49,7 @@ public extension UIButton {
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    func setIconImage(withIcon icon: FontAwesome, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
+    public func setIconImage(withIcon icon: FontAwesome, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
         let image = UIImage.fontAwesome(with: icon, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }
@@ -64,7 +64,7 @@ public extension UITabBarItem {
      - parameter size: The size of the image, in points.
      - parameter icon: The icon to be used as image.
      */
-    convenience init(withIcon icon: Ionicons, title: String?, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: Ionicons, title: String?, size: CGSize, color: UIColor) {
         let image = UIImage.ionicon(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(title: title, image: image, tag: icon.hashValue)
     }
@@ -76,7 +76,7 @@ public extension UITabBarItem {
      - parameter title: The item's title. If nil, a title is not displayed.
      - parameter icon: The icon to be used as image.
      */
-    convenience init(withIcon icon: Ionicons, title: String?, color: UIColor = .black) {
+    public convenience init(withIcon icon: Ionicons, title: String?, color: UIColor = .black) {
         let image = UIImage.ionicon(with: icon, textColor: color, size: CGSize(width: 30.0, height: 30.0), backgroundColor: .clear)
         self.init(title: title, image: image, tag: icon.hashValue)
     }
@@ -89,7 +89,7 @@ public extension UITabBarItem {
      - parameter size: The size of the image, in points.
      - parameter icon: The icon to be used as image.
      */
-    convenience init(withIcon icon: FontAwesome, title: String?, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: FontAwesome, title: String?, size: CGSize, color: UIColor) {
         let image = UIImage.fontAwesome(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(title: title, image: image, tag: icon.hashValue)
     }
@@ -101,7 +101,7 @@ public extension UITabBarItem {
      - parameter title: The item's title. If nil, a title is not displayed.
      - parameter icon: The icon to be used as image.
      */
-    convenience init(withIcon icon: FontAwesome, title: String?, color: UIColor = .black) {
+    public convenience init(withIcon icon: FontAwesome, title: String?, color: UIColor = .black) {
         let image = UIImage.fontAwesome(with: icon, textColor: color, size: CGSize(width: 30.0, height: 30.0), backgroundColor: .clear)
         self.init(title: title, image: image, tag: icon.hashValue)
     }
@@ -116,7 +116,7 @@ public extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
         let image = UIImage.ionicon(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(image: image, style: .plain, target: target, action: action)
     }
@@ -127,7 +127,7 @@ public extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector) {
+    public convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector) {
         self.init(withIcon: icon, target: target, action: action, size: CGSize(width: 24.0, height: 24.0), color: .blue)
     }
     
@@ -139,7 +139,7 @@ public extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
         let image = UIImage.fontAwesome(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(image: image, style: .plain, target: target, action: action)
     }
@@ -150,7 +150,7 @@ public extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector) {
+    public convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector) {
         self.init(withIcon: icon, target: target, action: action, size: CGSize(width: 24.0, height: 24.0), color: .blue)
     }
 }
