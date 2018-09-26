@@ -42,7 +42,7 @@ public extension NSImage {
         let fontSize = min(size.width, size.height)
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = NSTextAlignment.center
-        let fontsAttributes = [NSAttributedStringKey.font: font.font(size: fontSize), NSAttributedStringKey.foregroundColor: textColor, NSAttributedStringKey.backgroundColor: backgroundColor, NSAttributedStringKey.paragraphStyle: paragraph]
+        let fontsAttributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: font.font(size: fontSize), NSAttributedString.Key.foregroundColor: textColor, NSAttributedString.Key.backgroundColor: backgroundColor, NSAttributedString.Key.paragraphStyle: paragraph]
         let attributedString = NSAttributedString(string: name, attributes: fontsAttributes)
         
         var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)

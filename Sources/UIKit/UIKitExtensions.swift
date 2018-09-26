@@ -33,11 +33,11 @@ public extension UIButton {
     /**
      Sets the Ionicons icon to use for the specified state.
      - parameter icon: The Ionicons icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
+     - parameter state: The state that uses the specified title. The values are described in UIControl.State.
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    public func setIconImage(withIcon icon: Ionicons, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
+    public func setIconImage(withIcon icon: Ionicons, forState state: UIControl.State, color: UIColor? = nil, size: CGSize? = nil) {
         let image = UIImage.ionicon(with: icon, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }
@@ -45,11 +45,11 @@ public extension UIButton {
     /**
      Sets the icon to use for the specified state.
      - parameter icon: The FontAwesome icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
+     - parameter state: The state that uses the specified title. The values are described in UIControl.State.
      - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
      */
-    public func setIconImage(withIcon icon: FontAwesome, forState state: UIControlState, color: UIColor? = nil, size: CGSize? = nil) {
+    public func setIconImage(withIcon icon: FontAwesome, forState state: UIControl.State, color: UIColor? = nil, size: CGSize? = nil) {
         let image = UIImage.fontAwesome(with: icon, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: .clear)
         setImage(image, for: state)
     }

@@ -16,9 +16,8 @@ extension NSImageView {
     /**
      Sets the Ionicons icon to use for the specified image view.
      - parameter icon: The Ionicons icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
-     - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
      */
     public func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.ionicon(with: icon, textColor: color, size: size ?? frame.size)
@@ -38,9 +37,8 @@ extension NSImageView {
     /**
      Sets the FontAwesome icon to use for the specified image view.
      - parameter icon: The FontAwesome icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
-     - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
      */
     public func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.fontAwesome(with: icon, textColor: color, size: size ?? frame.size)
@@ -62,9 +60,8 @@ extension NSButton {
     /**
      Sets the Ionicons icon.
      - parameter icon: The Ionicons icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
-     - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
      */
     public func setImage(withIcon icon: Ionicons, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.ionicon(with: icon, textColor: color, size: size ?? frame.size)
@@ -84,9 +81,8 @@ extension NSButton {
     /**
      Sets the FontAwesome icon.
      - parameter icon: The FontAwesome icon to be used as image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
-     - parameter color: The color of the image.
      - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
      */
     public func setImage(withIcon icon: FontAwesome, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.fontAwesome(with: icon, textColor: color, size: size ?? frame.size)
