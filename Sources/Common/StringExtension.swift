@@ -1,7 +1,7 @@
 import Foundation
 
 /// A Font extension to String.
-public extension String {
+extension String {
     
     /// Get String located by name of font convertible
     ///

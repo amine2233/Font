@@ -1,7 +1,7 @@
 #if canImport(Cocoa)
 import Cocoa
 
-public extension NSImage {
+extension NSImage {
     /// Get a Ionicons image with the given icon name, text color, size and an optional background color.
     ///
     /// - parameter name: The preferred Ionicons icon name.

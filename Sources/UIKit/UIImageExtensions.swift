@@ -3,7 +3,7 @@ import UIKit
 
 #if !os(watchOS)
 /// A Ionicons extension to UIImage.
-public extension UIImage {
+extension UIImage {
     /// Get a Ionicons image with the given Ionicons icon name, text color, size and an optional background color.
     ///
     /// - parameter name: The preferred Ionicons icon name.

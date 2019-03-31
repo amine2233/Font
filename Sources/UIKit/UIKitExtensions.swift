@@ -3,7 +3,7 @@ import UIKit
 
 #if !os(watchOS)
 /// A Ionicons extension to UIImageView.
-public extension UIImageView {
+extension UIImageView {
     /// Initializes a new item using the specified Ionicons icon and other properties.
     ///
     /// - parameter name: The preferred Ionicons icon name.
@@ -29,7 +29,7 @@ public extension UIImageView {
     }
 }
 
-public extension UIButton {
+extension UIButton {
     /**
      Sets the Ionicons icon to use for the specified state.
      - parameter icon: The Ionicons icon to be used as image.
@@ -55,7 +55,7 @@ public extension UIButton {
     }
 }
 
-public extension UITabBarItem {
+extension UITabBarItem {
     /**
      Initializes a new item using the specified Ionicons icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
@@ -107,7 +107,7 @@ public extension UITabBarItem {
     }
 }
 
-public extension UIBarButtonItem {
+extension UIBarButtonItem {
     /**
      Initializes a new item using the specified Ionicons icon and other properties.
      - parameter icon: The Ionicons icon to be used as image.
