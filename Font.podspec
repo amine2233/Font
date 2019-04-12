@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 		s.name 				= "Font"
-		s.version 			= "2.0.0"
+		s.version 			= "2.0.1"
 		s.summary         	= "Sort description of 'Font' framework"
 	    s.homepage        	= "https://github.com/amine2233/Font"
 	    s.license           = { type: 'MIT', file: 'LICENSE' }
