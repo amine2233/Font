@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 		s.name 				= "Font"
-		s.version 			= "1.2.1"
+		s.version 			= "2.0.0"
 		s.summary         	= "Sort description of 'Font' framework"
 	    s.homepage        	= "https://github.com/amine2233/Font"
 	    s.license           = { type: 'MIT', file: 'LICENSE' }
@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
 	    s.resource			= "Sources/Resources/**/*.ttf","Sources/Resources/**/*.otf"
 	    s.source_files      = "Sources/**/*.swift"
   		s.module_name = s.name
-  		s.swift_version = '4.2'
+  		s.swift_version = "5.0"
   		s.pod_target_xcconfig = {
-    		'SWIFT_VERSION' => s.swift_version
+    		'SWIFT_VERSION' => s.swift_version.to_s
   		}
 	end

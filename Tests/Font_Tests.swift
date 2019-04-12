@@ -1,6 +1,6 @@
 //
-//  Blog_iOSTests.swift
-//  Blog iOSTests
+//  Font_iOSTests.swift
+//  Font iOSTests
 //
 //  Created by Amine Bensalah on 17/04/2018.
 //
