@@ -5,8 +5,8 @@
 //  Created by Amine Bensalah on 17/04/2018.
 //
 
-@testable import Font
 import XCTest
+@testable import Font
 
 class Font_Tests: XCTestCase {
     override func setUp() {
@@ -20,8 +20,11 @@ class Font_Tests: XCTestCase {
     }
 
     func testExample() {
-        let font = Font(font: FontFamily.Ionicons.medium, size: 14.0)
-        XCTAssertNotNil(font)
+        let ioniconsFont = Font(font: Ionicons.regularFont, size: 14.0)
+        XCTAssertNotNil(ioniconsFont)
+        
+        let fontAwesomeFont = Font(font: FontAwesome.regularFont, size: 14.0)
+        XCTAssertNotNil(fontAwesomeFont)
     }
 
     func testPerformanceExample() {

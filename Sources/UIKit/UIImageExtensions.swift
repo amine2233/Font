@@ -38,7 +38,7 @@ extension UIImage {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = NSTextAlignment.center
         let fontSize = min(size.width, size.height)
-        let fontsAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: Font(font: font, size: fontSize), NSAttributedString.Key.foregroundColor: textColor, NSAttributedString.Key.backgroundColor: backgroundColor, NSAttributedString.Key.paragraphStyle: paragraph]
+        let fontsAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: Font(font: font, size: fontSize)!, NSAttributedString.Key.foregroundColor: textColor, NSAttributedString.Key.backgroundColor: backgroundColor, NSAttributedString.Key.paragraphStyle: paragraph]
         let attributedString = NSAttributedString(string: name, attributes: fontsAttributes)
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         attributedString.draw(in: CGRect(x: 0, y: (size.height - fontSize) / 2, width: size.width, height: fontSize))

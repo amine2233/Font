@@ -116,7 +116,7 @@ extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    public convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: Ionicons, target: AnyObject? = nil, action: Selector? = nil, size: CGSize, color: UIColor) {
         let image = UIImage.ionicon(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(image: image, style: .plain, target: target, action: action)
     }
@@ -127,7 +127,7 @@ extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    public convenience init(withIcon icon: Ionicons, target: AnyObject?, action: Selector) {
+    public convenience init(withIcon icon: Ionicons, target: AnyObject? = nil, action: Selector? = nil) {
         self.init(withIcon: icon, target: target, action: action, size: CGSize(width: 24.0, height: 24.0), color: .blue)
     }
     
@@ -139,7 +139,7 @@ extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    public convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector, size: CGSize, color: UIColor) {
+    public convenience init(withIcon icon: FontAwesome, target: AnyObject? = nil, action: Selector? = nil, size: CGSize, color: UIColor) {
         let image = UIImage.fontAwesome(with: icon, textColor: color, size: size, backgroundColor: .clear)
         self.init(image: image, style: .plain, target: target, action: action)
     }
@@ -150,7 +150,7 @@ extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    public convenience init(withIcon icon: FontAwesome, target: AnyObject?, action: Selector) {
+    public convenience init(withIcon icon: FontAwesome, target: AnyObject? = nil, action: Selector? = nil) {
         self.init(withIcon: icon, target: target, action: action, size: CGSize(width: 24.0, height: 24.0), color: .blue)
     }
 }
