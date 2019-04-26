@@ -67,8 +67,36 @@ extension Font {
     }
 }
 
-public protocol FontFamily {
+public protocol FontFamily: RawRepresentable {
     static var regularFont: FontConvertible { get }
+    var name: String { get }
+}
+
+extension FontFamily where Self: RawRepresentable, Self.RawValue == String {
+
+    public var name: String {
+        return rawValue
+    }
+}
+
+extension FontFamily where Self: Equatable {
+
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+
+extension FontFamily where Self: Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+}
+
+extension RawRepresentable where RawValue == String, Self: FontFamily {
+    public var name: String {
+        return self.rawValue
+    }
 }
 
 private final class BundleToken {}
