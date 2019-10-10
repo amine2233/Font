@@ -1,6 +1,7 @@
 #if canImport(Cocoa)
 import Cocoa
 
+#if os(macOS)
 extension NSImageView {
     /// Initializes a new item using the specified Ionicons icon and other properties.
     ///
@@ -145,4 +146,5 @@ extension NSButton {
         image = NSImage.font(icon, textColor: color, size: size ?? frame.size)
     }
 }
+#endif
 #endif

@@ -1,6 +1,7 @@
 #if canImport(Cocoa)
 import Cocoa
 
+#if os(macOS)
 extension NSImage {
     /// Get a Ionicons image with the given icon name, text color, size and an optional background color.
     ///
@@ -94,4 +95,5 @@ extension NSImage {
         return image
     }
 }
+#endif
 #endif
