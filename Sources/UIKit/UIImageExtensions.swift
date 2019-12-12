@@ -5,30 +5,6 @@ import UIKit
 /// A Ionicons extension to UIImage.
 extension UIImage {
     
-    /// Get a Ionicons image with the given Ionicons icon name, text color, size and an optional background color.
-    ///
-    /// - parameter name: The preferred Ionicons icon name.
-    /// - parameter textColor: The text color.
-    /// - parameter size: The image size.
-    /// - parameter backgroundColor: The background color (optional).
-    /// - returns: A UIImage that will appear as icon with Ionicons
-    @available(*, deprecated, message: "use: fontIcon<T: FontFamily>(_ value: T, textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear) -> UIImage?")
-    public static func ionicon(with name: Ionicons, textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear) -> UIImage? {
-        return UIImage.fontConfigure(Ionicons.regularFont, name: name.rawValue, textColor: textColor, size: size, backgroundColor: backgroundColor)
-    }
-
-    /// Get a FontAwesome image with the given FontAwesome icon name, text color, size and an optional background color.
-    ///
-    /// - parameter name: The preferred icon name.
-    /// - parameter textColor: The text color.
-    /// - parameter size: The image size.
-    /// - parameter backgroundColor: The background color (optional).
-    /// - returns: A UIImage that will appear as icon with FontAwesome
-    @available(*, deprecated, message: "use: fontIcon<T: FontFamily>(_ value: T, textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear) -> UIImage?")
-    public static func fontAwesome(with name: FontAwesome,textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear) -> UIImage? {
-        return UIImage.fontConfigure(FontAwesome.regularFont, name: name.rawValue, textColor: textColor, size: size, backgroundColor: backgroundColor)
-    }
-    
     /// Get a FontAwesome image with the given FontAwesome icon name, text color, size and an optional background color.
     ///
     /// - parameter name: The preferred icon name.

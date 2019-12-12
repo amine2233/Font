@@ -3,31 +3,6 @@ import Cocoa
 
 #if os(macOS)
 extension NSImage {
-    /// Get a Ionicons image with the given icon name, text color, size and an optional background color.
-    ///
-    /// - parameter name: The preferred Ionicons icon name.
-    /// - parameter textColor: The text color.
-    /// - parameter size: The image size.
-    /// - parameter backgroundColor: The background color (optional).
-    /// - parameter edgeInsets: The position of icon (optional).
-    /// - returns: A UIImage that will appear as icon with Ionicons
-    @available(*, deprecated, message: "use: font<T: FontFamily>(_ font:, textColor: NSColor, size: CGSize, backgroundColor: NSColor, edgeInsets: NSEdgeInsets) -> NSImage")
-    public static func ionicon(with name: Ionicons, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage? {
-        return NSImage.fontConfigure(Ionicons.regularFont, with: String.fontConvertible(with: name.rawValue), size: size, textColor: textColor, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
-    }
-
-    /// Get a FontAwesome image with the given FontAwesome icon name, text color, size and an optional background color.
-    ///
-    /// - parameter name: The preferred FontAwesome icon name.
-    /// - parameter textColor: The text color.
-    /// - parameter size: The image size.
-    /// - parameter backgroundColor: The background color (optional).
-    /// - parameter edgeInsets: The position of icon (optional).
-    /// - returns: A UIImage that will appear as icon with Ionicons
-    @available(*, deprecated, message: "use: font<T: FontFamily>(_ font:, textColor: NSColor, size: CGSize, backgroundColor: NSColor, edgeInsets: NSEdgeInsets) -> NSImage")
-    public static func fontAwesome(with name: FontAwesome, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage? {
-        return NSImage.fontConfigure(FontAwesome.regularFont, with: String.fontConvertible(with: name.rawValue), size: size, textColor: textColor, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
-    }
     
     /// Get a FontAwesome image with the given FontAwesome icon name, text color, size and an optional background color.
     ///
