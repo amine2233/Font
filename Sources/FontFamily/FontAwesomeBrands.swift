@@ -3928,5 +3928,5 @@ public enum FontAwesomeBrands: String, CaseIterable {
 
 /// Extension `FontAwesomeBrands` for `FontFamily`
 extension FontAwesomeBrands: FontFamily {
-    public static let fontConvertible: FontConvertible = FontConvertible(name: "FontAwesome5Brands-Regular", family: "Font Awesome 5 Brands-Regular-400", fileName: "fa-brand-400", ratio: 1.28571429)
+    public static let fontConvertible: FontConvertible = FontConvertible(name: "FontAwesome5Brands-Regular", family: "Font Awesome 5 Brands-Regular-400", fileName: "fa-brands-400", ratio: 1.28571429)
 }

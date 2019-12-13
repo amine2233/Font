@@ -89,22 +89,22 @@ extension UIBarButtonItem {
 }
 
 extension UISegmentedControl {
-    open func insertSegment<T: FontFamily>(with icon: T, at segment: Int, animated: Bool, size: CGSize) {
+    public func insertSegment<T: FontFamily>(with icon: T, at segment: Int, animated: Bool, size: CGSize) {
         let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: size)
         insertSegment(with: iconImage, at: segment, animated: animated)
     }
 
-    open func setImage<T: FontFamily>(_ icon: T, forSegmentAt segment: Int, size: CGSize) {
+    public func setImage<T: FontFamily>(_ icon: T, forSegmentAt segment: Int, size: CGSize) {
         let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: size)
         setImage(iconImage, forSegmentAt: segment)
     }
 
-    open func setBackgroundImage<T: FontFamily>(_ icon: T, for state: UIControl.State, barMetrics: UIBarMetrics) {
+    public func setBackgroundImage<T: FontFamily>(_ icon: T, for state: UIControl.State, barMetrics: UIBarMetrics) {
         let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: frame.size)
         setBackgroundImage(iconImage, for: state, barMetrics: barMetrics)
     }
 
-    open func setDividerImage<T: FontFamily>(_ dividerIcon: T, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State, barMetrics: UIBarMetrics, size: CGSize) {
+    public func setDividerImage<T: FontFamily>(_ dividerIcon: T, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State, barMetrics: UIBarMetrics, size: CGSize) {
         let iconImage = UIImage.fontIcon(dividerIcon, textColor: tintColor, size: size)
         setDividerImage(iconImage, forLeftSegmentState: leftState, rightSegmentState: rightState, barMetrics: barMetrics)
     }

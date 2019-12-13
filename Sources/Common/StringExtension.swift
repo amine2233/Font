@@ -22,6 +22,7 @@ extension String {
 
     /// Get a FontFamily icon string with the given CSS icon code.
     ///
+    /// - parameter type: The `FontFamily` icon type.
     /// - parameter code: The preferred icon name.
     /// - returns: A string that will appear as icon with FontFamily.
     static func fontFontFamilyIcon<T: FontFamily>(type: T.Type, code: String) -> String? where T.RawValue == String {
@@ -34,9 +35,18 @@ extension String {
 
     /// Get a FontFamily icon with the given CSS icon code.
     ///
+    /// - parameter type: The `FontFamily` icon type.
     /// - parameter code: The preferred icon name.
     /// - returns: An internal corresponding FontFamily code.
     public static func font<T: FontFamily>(type: T.Type, code: String) -> T? where T.RawValue == String {
         return type.init(rawValue: code)
+    }
+
+    /// Get a FontFamily icon with the given CSS icon code.
+    ///
+    /// - parameter code: The preferred icon name.
+    /// - returns: An internal corresponding FontFamily code.
+    public func font<T: FontFamily>(type: T.Type) -> T? where T.RawValue == String {
+        return T(rawValue: self)
     }
 }

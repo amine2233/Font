@@ -103,37 +103,33 @@ extension Font {
     #endif
 }
 
-public enum FontStyle: String, CaseIterable {
-    case solid
-    case light
-    case regular
-    case brands
-}
-
+/// The `FontFamily` protocol
 public protocol FontFamily: RawRepresentable {
+    /// The name of icon
     var name: String { get }
+    /// The unicode of icon `\u{...}`
     var unicode: String { get }
+    /// The `FontConvertible`
     static var fontConvertible: FontConvertible { get }
 }
 
 extension FontFamily where Self: RawRepresentable, Self.RawValue == String {
-
     public var name: String {
         return rawValue
     }
 }
 
 extension FontFamily where Self: Equatable {
-
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.name == rhs.name &&
+            lhs.unicode == rhs.unicode
     }
 }
 
 extension FontFamily where Self: Hashable {
-    
     public func hash(into hasher: inout Hasher) {
         hasher.combine(name)
+        hasher.combine(unicode)
     }
 }
 

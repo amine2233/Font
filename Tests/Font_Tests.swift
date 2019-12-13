@@ -19,13 +19,55 @@ class Font_Tests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        let ioniconsFont = Font(font: Ionicons.regularFont, size: 14.0)
+    func testLoadIoniconsFont() {
+        let ioniconsFont = Font(font: Ionicons.fontConvertible, size: 14.0)
         XCTAssertNotNil(ioniconsFont)
-        
-        let fontAwesomeFont = Font(font: FontAwesome.regularFont, size: 14.0)
-        XCTAssertNotNil(fontAwesomeFont)
+        Ionicons.fontConvertible.unregister()
     }
+
+    func testLoadFontAwesomeSolid() {
+        let fontAwesomeFont = Font(font: FontAwesomeSolid.fontConvertible, size: 14.0)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeSolid.fontConvertible.unregister()
+    }
+
+    func testLoadFontAwesomeRegular() {
+        let fontAwesomeFont = Font(font: FontAwesomeRegular.fontConvertible, size: 14.0)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeRegular.fontConvertible.unregister()
+    }
+
+    func testLoadFontAwesomeBrands() {
+        let fontAwesomeFont = Font(font: FontAwesomeBrands.fontConvertible, size: 14.0)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeBrands.fontConvertible.unregister()
+    }
+
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    func testLoadIoniconsFontForTextStyle() {
+        let ioniconsFont = Font.font(forTextStyle: .body, font: Ionicons.fontConvertible)
+        XCTAssertNotNil(ioniconsFont)
+        Ionicons.fontConvertible.unregister()
+    }
+
+    func testLoadFontAwesomeSolidForTextStyle() {
+        let fontAwesomeFont = Font.font(forTextStyle: .title1, font: FontAwesomeSolid.fontConvertible)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeSolid.fontConvertible.unregister()
+    }
+
+    func testLoadFontAwesomeRegularForTextStyle() {
+        let fontAwesomeFont = Font.font(forTextStyle: .title3, font: FontAwesomeRegular.fontConvertible)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeRegular.fontConvertible.unregister()
+    }
+
+    func testLoadFontAwesomeBrandsForTextStyle() {
+        let fontAwesomeFont = Font.font(forTextStyle: .footnote, font: FontAwesomeBrands.fontConvertible)
+        XCTAssertNotNil(fontAwesomeFont)
+        FontAwesomeBrands.fontConvertible.unregister()
+    }
+    #endif
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
