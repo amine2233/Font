@@ -1,18 +1,19 @@
 #if os(OSX)
     import AppKit.NSFont
-    typealias Font = NSFont
+    public typealias Font = NSFont
 #elseif os(iOS) || os(tvOS) || os(watchOS)
     import UIKit.UIFont
-    typealias Font = UIFont
+    public typealias Font = UIFont
 #endif
 
-public struct FontConvertible {
+public struct FontConvertible: Hashable, Equatable {
     public let name: String
     public let family: String
     public let path: String
+    public let ratio: Float
     public let extensions = ["otf", "ttf"]
 
-    func font(size: CGFloat) -> Font! {
+    public func font(size: CGFloat) -> Font! {
         return Font(font: self, size: size)
     }
 
@@ -36,7 +37,7 @@ public struct FontConvertible {
 }
 
 extension Font {
-    convenience init!(font: FontConvertible, size: CGFloat) {
+    public convenience init!(font: FontConvertible, size: CGFloat) {
         #if os(iOS) || os(tvOS) || os(watchOS)
             if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
                 font.register()
@@ -54,7 +55,7 @@ extension Font {
     /// Unregister font convertible
     ///
     /// - Parameter font: FontConvertible it will be unregistred
-    static func unregister(font: FontConvertible) {
+    public static func unregister(font: FontConvertible) {
         #if os(iOS) || os(tvOS) || os(watchOS)
         if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
             font.unregister()
@@ -65,11 +66,35 @@ extension Font {
         }
         #endif
     }
+
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    public static func font(forTextStyle textStyle: Font.TextStyle, font: FontConvertible) -> Font? {
+        let userFont = UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle)
+        let pointSize = userFont.pointSize
+
+        guard let convertibleFont = font.font(size: pointSize) else { return nil }
+
+        if #available(iOS 11.0, *), #available(watchOSApplicationExtension 4.0, *), #available(tvOS 11.0, *) {
+            return UIFontMetrics.default.scaledFont(for: convertibleFont)
+        } else {
+            let scale = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).pointSize / 17
+            return convertibleFont.withSize(scale * convertibleFont.pointSize)
+        }
+    }
+    #endif
+}
+
+public enum FontStyle: String, CaseIterable {
+    case solid
+    case light
+    case regular
+    case brands
 }
 
 public protocol FontFamily: RawRepresentable {
-    static var regularFont: FontConvertible { get }
     var name: String { get }
+    var unicode: String { get }
+    static var fontDetail: FontConvertible { get }
 }
 
 extension FontFamily where Self: RawRepresentable, Self.RawValue == String {

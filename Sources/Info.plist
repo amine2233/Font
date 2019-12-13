@@ -22,8 +22,11 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ionicons.ttf</string>
-		<string>fontawesome-webfont.ttf</string>
+		<string>fa-brands-400.otf</string>
+		<string>fa-regular-400.otf</string>
+		<string>fa-solid-900.otf</string>
+		<string>ionicons.otf</string>
+		<string>fontawesome-webfont.otf</string>
 	</array>
 </dict>
 </plist>
