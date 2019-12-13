@@ -13,7 +13,7 @@ extension NSImage {
     /// - parameter edgeInsets: The position of icon (optional).
     /// - returns: A UIImage that will appear as icon with Ionicons
     public static func font<T: FontFamily>(_ font: T, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage? {
-        return NSImage.fontConfigure(T.fontDetail, with: String.fontConvertible(with: font.name), size: size, textColor: textColor, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
+        return NSImage.fontConfigure(T.fontConvertible, with: String.fontConvertible(with: font.name), size: size, textColor: textColor, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
     }
     
     

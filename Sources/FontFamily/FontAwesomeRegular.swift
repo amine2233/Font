@@ -1,5 +1,10 @@
-/// FontAwesomeRegular
-public enum FontAwesomeRegular: String {
+import Foundation
+
+/// FontAwesome for Regular
+/// ```
+/// [Doc](https://fontawesome.com/icons?d=gallery)
+/// ```
+public enum FontAwesomeRegular: String, CaseIterable {
 
         /// Icone name `User` format `user`
         case user = "user"
@@ -916,9 +921,6 @@ public enum FontAwesomeRegular: String {
 
             /// Code `f258` for name `Lizard (Hand)` with format `lizard_(hand)`
             case .lizardHand: return "\u{f258}"
-
-            /// Default is empty
-            default: return ""
         }
     }
 
@@ -1388,5 +1390,5 @@ public enum FontAwesomeRegular: String {
 
 /// Extension `FontAwesomeRegular` for `FontFamily`
 extension FontAwesomeRegular: FontFamily {
-    public static let fontDetail = FontConvertible(name: "FontAwesome5Free-Regular", family: "Font Awesome 5 Free-Regular-400", path: "fa-regular-400", ratio: 1.28571429)
+    public static let fontConvertible = FontConvertible(name: "FontAwesome5Free-Regular", family: "Font Awesome 5 Free-Regular-400", fileName: "fa-regular-400", ratio: 1.28571429)
 }

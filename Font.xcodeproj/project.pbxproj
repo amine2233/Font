@@ -27,7 +27,6 @@
 		672BAD3E23A36F57002E6381 /* ionicons.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672BAD3C23A36F57002E6381 /* ionicons.otf */; };
 		672BAD3F23A36F57002E6381 /* ionicons.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672BAD3C23A36F57002E6381 /* ionicons.otf */; };
 		672BAD4023A36F57002E6381 /* ionicons.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672BAD3C23A36F57002E6381 /* ionicons.otf */; };
-		672BAD4323A38F5D002E6381 /* FontFamilyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BAD4223A38F5D002E6381 /* FontFamilyExtension.swift */; };
 		6751218420EB46C200CC3DD7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751218120EB46C200CC3DD7 /* UIImageExtensions.swift */; };
 		6751218720EB46C200CC3DD7 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751218220EB46C200CC3DD7 /* UIKitExtensions.swift */; };
 		6751218E20EB470800CC3DD7 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751218220EB46C200CC3DD7 /* UIKitExtensions.swift */; };
@@ -96,7 +95,6 @@
 		672BAD2E23A36F4D002E6381 /* fa-regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.otf"; sourceTree = "<group>"; };
 		672BAD2F23A36F4D002E6381 /* fa-solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.otf"; sourceTree = "<group>"; };
 		672BAD3C23A36F57002E6381 /* ionicons.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.otf; sourceTree = "<group>"; };
-		672BAD4223A38F5D002E6381 /* FontFamilyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamilyExtension.swift; sourceTree = "<group>"; };
 		6751218120EB46C200CC3DD7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		6751218220EB46C200CC3DD7 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		6751219020EB479700CC3DD7 /* NSImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
@@ -213,6 +211,7 @@
 		679131D42086093A00E815DD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				672BAD4123A38F44002E6381 /* FontFamily */,
 				67DA9A6120EAD75A00CB69D7 /* Common */,
 				679131E820860CBF00E815DD /* UIKit */,
 				679131E720860CBE00E815DD /* AppKit */,
@@ -289,10 +288,8 @@
 		67DA9A6120EAD75A00CB69D7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				672BAD4123A38F44002E6381 /* FontFamily */,
 				67DA9A6320EAD75A00CB69D7 /* Fonts.swift */,
 				67DA9A6420EAD75A00CB69D7 /* StringExtension.swift */,
-				672BAD4223A38F5D002E6381 /* FontFamilyExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -602,7 +599,6 @@
 				6791322720860D5000E815DD /* AppKitExtensions.swift in Sources */,
 				6751219120EB479700CC3DD7 /* NSImageExtension.swift in Sources */,
 				672BAD1F23A363F4002E6381 /* FontAwesomeSolid.swift in Sources */,
-				672BAD4323A38F5D002E6381 /* FontFamilyExtension.swift in Sources */,
 				67772F6423A2257800AB61B0 /* FontAwesomeBrands.swift in Sources */,
 				67772F6823A2257800AB61B0 /* FontAwesomeRegular.swift in Sources */,
 				67DA9A6920EAD75A00CB69D7 /* Fonts.swift in Sources */,

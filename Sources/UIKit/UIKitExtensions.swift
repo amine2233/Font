@@ -24,6 +24,7 @@ extension UIImageView {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     public func setIcon<T: FontFamily>(_ font: T, color: UIColor? = nil, size: CGSize? = nil, backgroundColor: UIColor = .clear) {
+        self.clipsToBounds = true
         self.image = UIImage.fontIcon(font, textColor: color ?? tintColor, size: size ?? frame.size, backgroundColor: backgroundColor)
     }
 }
@@ -84,6 +85,28 @@ extension UIBarButtonItem {
      */
     public func setIcon<T: FontFamily>(_ icon: T, size: CGSize = CGSize(width: 24.0, height: 24.0), color: UIColor? = nil, backgroundColor: UIColor = .clear) {
         self.image = UIImage.fontIcon(icon, textColor: color ?? self.tintColor ?? .black, size: size, backgroundColor: backgroundColor)
+    }
+}
+
+extension UISegmentedControl {
+    open func insertSegment<T: FontFamily>(with icon: T, at segment: Int, animated: Bool, size: CGSize) {
+        let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: size)
+        insertSegment(with: iconImage, at: segment, animated: animated)
+    }
+
+    open func setImage<T: FontFamily>(_ icon: T, forSegmentAt segment: Int, size: CGSize) {
+        let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: size)
+        setImage(iconImage, forSegmentAt: segment)
+    }
+
+    open func setBackgroundImage<T: FontFamily>(_ icon: T, for state: UIControl.State, barMetrics: UIBarMetrics) {
+        let iconImage = UIImage.fontIcon(icon, textColor: tintColor, size: frame.size)
+        setBackgroundImage(iconImage, for: state, barMetrics: barMetrics)
+    }
+
+    open func setDividerImage<T: FontFamily>(_ dividerIcon: T, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State, barMetrics: UIBarMetrics, size: CGSize) {
+        let iconImage = UIImage.fontIcon(dividerIcon, textColor: tintColor, size: size)
+        setDividerImage(iconImage, forLeftSegmentState: leftState, rightSegmentState: rightState, barMetrics: barMetrics)
     }
 }
 #endif

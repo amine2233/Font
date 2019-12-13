@@ -7,36 +7,50 @@
 #endif
 
 public struct FontConvertible: Hashable, Equatable {
+    /// The name of `FontConvertible
     public let name: String
+    /// The family name of `FontConvertible`
     public let family: String
-    public let path: String
+    /// The file name of `FontConvertible
+    public let fileName: String
+    /// The ratio of `FontConvertible
     public let ratio: Float
+    /// The file extension of `FontConvertible`
     public let extensions = ["otf", "ttf"]
 
-    public func font(size: CGFloat) -> Font! {
+    /// Register and then get the new `Font`
+    public func font(size: CGFloat) -> Font? {
         return Font(font: self, size: size)
     }
 
+    /// Register font
     func register() {
         guard let url = url else { return }
         var errorRef: Unmanaged<CFError>?
         CTFontManagerRegisterFontsForURL(url as CFURL, .process, &errorRef)
     }
-    
+
+    /// Unregister font
     func unregister() {
         guard let url = url else { return }
         var errorRef: Unmanaged<CFError>?
         CTFontManagerUnregisterFontsForURL(url as CFURL, .process, &errorRef)
     }
 
+    /// The path url of `Font`
     fileprivate var url: URL? {
         let bundle = Bundle(for: BundleToken.self)
-        guard let url = extensions.compactMap({ bundle.url(forResource: path, withExtension: $0) }).first else { return nil }
+        guard let url = extensions.compactMap({ bundle.url(forResource: fileName, withExtension: $0) }).first else { return nil }
         return url
     }
 }
 
 extension Font {
+    /// Create new icon font
+    ///
+    /// - Parameter font: The Icon Font
+    /// - Parameter size: The Size of icon
+    /// - returns: new `Font`
     public convenience init!(font: FontConvertible, size: CGFloat) {
         #if os(iOS) || os(tvOS) || os(watchOS)
             if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
@@ -68,6 +82,11 @@ extension Font {
     }
 
     #if os(iOS) || os(tvOS) || os(watchOS)
+    /// Create new icon font
+    ///
+    /// - Parameter textStyle: The text Font style
+    /// - Parameter icon: The Font icon
+    /// - returns: new `Font`
     public static func font(forTextStyle textStyle: Font.TextStyle, font: FontConvertible) -> Font? {
         let userFont = UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle)
         let pointSize = userFont.pointSize
@@ -94,7 +113,7 @@ public enum FontStyle: String, CaseIterable {
 public protocol FontFamily: RawRepresentable {
     var name: String { get }
     var unicode: String { get }
-    static var fontDetail: FontConvertible { get }
+    static var fontConvertible: FontConvertible { get }
 }
 
 extension FontFamily where Self: RawRepresentable, Self.RawValue == String {

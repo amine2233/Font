@@ -1,4 +1,10 @@
-public enum FontAwesomeBrands: String {
+import Foundation
+
+/// FontAwesome for Brands
+/// ```
+/// [Doc](https://fontawesome.com/icons?d=gallery)
+/// ```
+public enum FontAwesomeBrands: String, CaseIterable {
 
         /// Icone name `ReadMe` format `readme`
         case readMe = "readme"
@@ -2607,9 +2613,6 @@ public enum FontAwesomeBrands: String {
 
             /// Code `f404` for name `Uniregistry` with format `uniregistry`
             case .uniregistry: return "\u{f404}"
-
-            /// Default is empty
-            default: return ""
         }
     }
 
@@ -3925,5 +3928,5 @@ public enum FontAwesomeBrands: String {
 
 /// Extension `FontAwesomeBrands` for `FontFamily`
 extension FontAwesomeBrands: FontFamily {
-    public static let fontDetail: FontConvertible = FontConvertible(name: "FontAwesome5Brands-Regular", family: "Font Awesome 5 Brands-Regular-400", path: "fa-brand-400", ratio: 1.28571429)
+    public static let fontConvertible: FontConvertible = FontConvertible(name: "FontAwesome5Brands-Regular", family: "Font Awesome 5 Brands-Regular-400", fileName: "fa-brand-400", ratio: 1.28571429)
 }

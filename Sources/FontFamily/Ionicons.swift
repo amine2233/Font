@@ -1,7 +1,10 @@
 import Foundation
 
 /// Ionicons
-public enum Ionicons: String {
+/// ```
+/// [Doc](https://ionicons.com)
+/// ```
+public enum Ionicons: String, CaseIterable {
 
     /// alert
     case alert = "alert"
@@ -3613,9 +3616,6 @@ public enum Ionicons: String {
 
             /// Code `0xf30c` for name `xbox` with format `xbox`
             case .xbox: return "\u{f30c}"
-
-            /// Default is empty
-            default: return ""
         }
     }
 
@@ -4831,5 +4831,5 @@ public enum Ionicons: String {
 
 /// Extension `Ionicons` for `FontFamily`
 extension Ionicons: FontFamily {
-    public static var fontDetail: FontConvertible = FontConvertible(name: "Ionicons", family: "Ionicons", path: "ionicons", ratio: 1)
+    public static var fontConvertible: FontConvertible = FontConvertible(name: "Ionicons", family: "Ionicons", fileName: "ionicons", ratio: 1)
 }

@@ -13,7 +13,7 @@ extension UIImage {
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImage that will appear as icon with FontAwesome
     public static func fontIcon<T: FontFamily>(_ value: T, textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear, borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear) -> UIImage? {
-        return UIImage.fontConfigure(T.fontDetail, name: value.unicode, textColor: textColor, size: size, backgroundColor: backgroundColor, borderWidth: borderWidth, borderColor: borderColor)
+        return UIImage.fontConfigure(T.fontConvertible, name: value.unicode, textColor: textColor, size: size, backgroundColor: backgroundColor, borderWidth: borderWidth, borderColor: borderColor)
     }
     
     /// Get a Font image with the given font type and name, text color, size and an optional background color.
