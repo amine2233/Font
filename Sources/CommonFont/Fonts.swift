@@ -16,7 +16,19 @@ public struct FontConvertible: Hashable, Equatable {
     /// The ratio of `FontConvertible
     public let ratio: Float
     /// The file extension of `FontConvertible`
-    public let extensions = ["otf", "ttf"]
+    public let extensions: [String]
+    /// The bundle
+    public let bundle: Bundle
+
+    public init(name: String, family: String, fileName: String, bundle: Bundle, ratio: Float, extensions: [String] = ["otf", "ttf"]) {
+        self.name = name
+        self.family = family
+        self.fileName = fileName
+        self.bundle = bundle
+        self.ratio = ratio
+        self.extensions = extensions
+        print(bundle.bundlePath)
+    }
 
     /// Register and then get the new `Font`
     public func font(size: CGFloat) -> Font? {
@@ -24,14 +36,14 @@ public struct FontConvertible: Hashable, Equatable {
     }
 
     /// Register font
-    func register() {
+    public func register() {
         guard let url = url else { return }
         var errorRef: Unmanaged<CFError>?
         CTFontManagerRegisterFontsForURL(url as CFURL, .process, &errorRef)
     }
 
     /// Unregister font
-    func unregister() {
+    public func unregister() {
         guard let url = url else { return }
         var errorRef: Unmanaged<CFError>?
         CTFontManagerUnregisterFontsForURL(url as CFURL, .process, &errorRef)
@@ -39,7 +51,6 @@ public struct FontConvertible: Hashable, Equatable {
 
     /// The path url of `Font`
     fileprivate var url: URL? {
-        let bundle = Bundle(for: BundleToken.self)
         guard let url = extensions.compactMap({ bundle.url(forResource: fileName, withExtension: $0) }).first else { return nil }
         return url
     }
@@ -138,5 +149,3 @@ extension RawRepresentable where RawValue == String, Self: FontFamily {
         return self.rawValue
     }
 }
-
-private final class BundleToken {}

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Common
 @testable import Font
 
 class Font_Tests: XCTestCase {

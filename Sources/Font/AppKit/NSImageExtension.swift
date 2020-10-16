@@ -1,3 +1,5 @@
+import CommonFont
+
 #if canImport(Cocoa)
 import Cocoa
 

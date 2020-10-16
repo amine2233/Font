@@ -1,3 +1,4 @@
+import CommonFont
 #if canImport(UIKit)
 import UIKit
 

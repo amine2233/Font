@@ -1,3 +1,4 @@
+import CommonFont
 import Foundation
 
 /// Ionicons
@@ -4831,5 +4832,5 @@ public enum Ionicons: String, CaseIterable {
 
 /// Extension `Ionicons` for `FontFamily`
 extension Ionicons: FontFamily {
-    public static var fontConvertible: FontConvertible = FontConvertible(name: "Ionicons", family: "Ionicons", fileName: "ionicons", ratio: 1)
+    public static var fontConvertible: FontConvertible = FontConvertible(name: "Ionicons", family: "Ionicons", fileName: "ionicons", bundle: .module, ratio: 1)
 }

@@ -1,3 +1,4 @@
+import CommonFont
 #if canImport(Cocoa)
 import Cocoa
 
@@ -49,6 +50,18 @@ extension NSButton {
      */
     public func setImage<T: FontFamily>(_ icon: T, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
         image = NSImage.font(icon, textColor: color, size: size ?? frame.size)
+    }
+}
+
+extension NSToolbarItem {
+    /**
+     Sets the `FontFamily` icon.
+     - parameter icon: The `FontFamily` icon to be used as image.
+     - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
+     */
+    public func setImage<T: FontFamily>(_ icon: T, size: CGSize? = nil, color: NSColor = NSColor.darkGray) {
+        image = NSImage.font(icon, textColor: color, size: size ?? minSize)
     }
 }
 #endif
