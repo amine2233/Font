@@ -12,7 +12,12 @@ extension UIImage {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImage that will appear as icon with FontAwesome
-    public static func fontIcon<T: FontFamily>(_ value: T, textColor: UIColor, size: CGSize, backgroundColor: UIColor = .clear, borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear) -> UIImage? {
+    public static func fontIcon<T: FontFamily>(_ value: T,
+                                               textColor: UIColor,
+                                               size: CGSize,
+                                               backgroundColor: UIColor = .clear,
+                                               borderWidth: CGFloat = 0,
+                                               borderColor: UIColor = UIColor.clear) -> UIImage? {
         return UIImage.fontConfigure(T.fontConvertible, name: value.unicode, textColor: textColor, size: size, backgroundColor: backgroundColor, borderWidth: borderWidth, borderColor: borderColor)
     }
     
@@ -24,7 +29,13 @@ extension UIImage {
     /// - parameter size: The image size.
     /// - parameter backgroundColor: The background color (optional).
     /// - returns: A UIImage that will appear as icon with FontAwesome
-    private static func fontConfigure(_ font: FontConvertible, name: String, textColor: UIColor, size: CGSize, backgroundColor: UIColor, borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear) -> UIImage? {
+    private static func fontConfigure(_ font: FontConvertible,
+                                      name: String,
+                                      textColor: UIColor,
+                                      size: CGSize,
+                                      backgroundColor: UIColor,
+                                      borderWidth: CGFloat = 0,
+                                      borderColor: UIColor = UIColor.clear) -> UIImage? {
 
         var size = size
         if size.width <= 0 { size.width = 1 }
