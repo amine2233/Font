@@ -40,7 +40,8 @@ public struct FontConvertible: Hashable, Equatable {
     /// The path url of `Font`
     fileprivate var url: URL? {
         let bundle = Bundle(for: BundleToken.self)
-        guard let url = extensions.compactMap({ bundle.url(forResource: fileName, withExtension: $0) }).first else { return nil }
+        let subDirectory = "Font_Font.bundle"
+        guard let url = extensions.compactMap({ bundle.url(forResource: fileName, withExtension: $0, subdirectory: subDirectory) }).first else { return nil }
         return url
     }
 }
