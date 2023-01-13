@@ -114,7 +114,7 @@ public protocol FontFamily: RawRepresentable {
     static var fontConvertible: FontConvertible { get }
 }
 
-extension FontFamily where Self: RawRepresentable, Self.RawValue == String {
+extension FontFamily where Self.RawValue == String {
     public var name: String {
         return rawValue
     }

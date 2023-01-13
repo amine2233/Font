@@ -5774,8 +5774,6 @@ public enum FontAwesomeSolid: String, CaseIterable {
 
         /// Code `f0d1` for name `truck` with format `truck`
         case .truck: return "\u{f0d1}"
-
-        default: return ""
         }
     }
 
