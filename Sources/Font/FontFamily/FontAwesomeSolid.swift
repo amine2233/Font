@@ -8670,5 +8670,10 @@ public enum FontAwesomeSolid: String, CaseIterable {
 
 /// Extension `FontAwesomeSolid` for `FontAwesome`
 extension FontAwesomeSolid: FontFamily {
-    public static var fontConvertible: FontConvertible = FontConvertible(name: "FontAwesome5Free-Solid", family: "Font Awesome 5 Free-Solid-900", fileName: "fa-solid-900", ratio: 1.28571429)
+    public static var fontConvertible: FontConvertible = FontConvertible(
+        name: "FontAwesome5Free-Solid",
+        family: "Font Awesome 5 Free-Solid-900",
+        fileName: "fa-solid-900",
+        ratio: 1.28571429
+    )
 }

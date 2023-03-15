@@ -12,8 +12,21 @@ extension NSImage {
     /// - parameter backgroundColor: The background color (optional).
     /// - parameter edgeInsets: The position of icon (optional).
     /// - returns: A UIImage that will appear as icon with Ionicons
-    public static func font<T: FontFamily>(_ font: T, textColor: NSColor, size: CGSize, backgroundColor: NSColor = NSColor.clear, edgeInsets: NSEdgeInsets = NSEdgeInsetsZero) -> NSImage? {
-        return NSImage.fontConfigure(T.fontConvertible, with: String.fontConvertible(with: font.name), size: size, textColor: textColor, backgroundColor: backgroundColor, edgeInsets: edgeInsets)
+    public static func font<T: FontFamily>(
+        _ font: T,
+        textColor: NSColor,
+        size: CGSize,
+        backgroundColor: NSColor = NSColor.clear,
+        edgeInsets: NSEdgeInsets = NSEdgeInsetsZero
+    ) -> NSImage? {
+        return NSImage.fontConfigure(
+            T.fontConvertible,
+            with: String.fontConvertible(with: font.name),
+            size: size,
+            textColor: textColor,
+            backgroundColor: backgroundColor,
+            edgeInsets: edgeInsets
+        )
     }
     
     
@@ -27,13 +40,24 @@ extension NSImage {
     ///   - backgroundColor: NSColor Background Color of result picture
     ///   - edgeInsets: NSEdgeInsets of result picture
     /// - Returns: NSImage located by name in font
-    private static func fontConfigure(_ font: FontConvertible, with name: String, size: CGSize, textColor: NSColor, backgroundColor: NSColor, edgeInsets: NSEdgeInsets) -> NSImage?
-    {
+    private static func fontConfigure(
+        _ font: FontConvertible,
+        with name: String,
+        size: CGSize,
+        textColor: NSColor,
+        backgroundColor: NSColor,
+        edgeInsets: NSEdgeInsets
+    ) -> NSImage? {
         let fontSize = min(size.width, size.height)
         guard let font = font.font(size: fontSize) else { return nil }
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = NSTextAlignment.center
-        let fontsAttributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: textColor, NSAttributedString.Key.backgroundColor: backgroundColor, NSAttributedString.Key.paragraphStyle: paragraph]
+        let fontsAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: textColor,
+            NSAttributedString.Key.backgroundColor: backgroundColor,
+            NSAttributedString.Key.paragraphStyle: paragraph
+        ]
         let attributedString = NSAttributedString(string: name, attributes: fontsAttributes)
         
         var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)

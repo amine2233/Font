@@ -25,7 +25,9 @@ extension String {
     /// - parameter type: The `FontFamily` icon type.
     /// - parameter code: The preferred icon name.
     /// - returns: A string that will appear as icon with FontFamily.
-    static func fontFontFamilyIcon<T: FontFamily>(type: T.Type, code: String) -> String? where T.RawValue == String {
+    static func fontFontFamilyIcon<T: FontFamily>(
+        type: T.Type, code: String
+    ) -> String? where T.RawValue == String {
         guard let name = font(type: type, code: code) else {
             return nil
         }

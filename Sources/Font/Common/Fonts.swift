@@ -39,9 +39,11 @@ public struct FontConvertible: Hashable, Equatable {
 
     /// The path url of `Font`
     fileprivate var url: URL? {
-        let bundle = Bundle(for: BundleToken.self)
-        let subDirectory = "Font_Font.bundle"
-        guard let url = extensions.compactMap({ bundle.url(forResource: fileName, withExtension: $0, subdirectory: subDirectory) }).first else { return nil }
+        let bundle = Bundle.font
+        let subDirectory = "Font_Font.bundle/Contents/Resources"
+        guard let url = extensions
+            .compactMap({ bundle.url(forResource: fileName, withExtension: $0, subdirectory: subDirectory) })
+            .first else { return nil }
         return url
     }
 }
@@ -139,5 +141,3 @@ extension RawRepresentable where RawValue == String, Self: FontFamily {
         return self.rawValue
     }
 }
-
-private final class BundleToken {}

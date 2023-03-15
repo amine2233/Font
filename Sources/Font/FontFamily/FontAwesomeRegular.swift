@@ -1390,5 +1390,10 @@ public enum FontAwesomeRegular: String, CaseIterable {
 
 /// Extension `FontAwesomeRegular` for `FontFamily`
 extension FontAwesomeRegular: FontFamily {
-    public static let fontConvertible = FontConvertible(name: "FontAwesome5Free-Regular", family: "Font Awesome 5 Free-Regular-400", fileName: "fa-regular-400", ratio: 1.28571429)
+    public static let fontConvertible = FontConvertible(
+        name: "FontAwesome5Free-Regular",
+        family: "Font Awesome 5 Free-Regular-400",
+        fileName: "fa-regular-400",
+        ratio: 1.28571429
+    )
 }

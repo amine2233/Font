@@ -20,7 +20,7 @@ class Font_Tests: XCTestCase {
     }
 
     func testLoadIoniconsFont() {
-        let ioniconsFont = Font(font: Ionicons.fontConvertible, size: 14.0)
+        let ioniconsFont = Font(font: Ionicons.fontConvertible, size: 14.0, bundle: .module)
         XCTAssertNotNil(ioniconsFont)
         Ionicons.fontConvertible.unregister()
     }
